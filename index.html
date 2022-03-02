@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Страница про путе6шествие по России">
+  <meta name="keywords" content="Куршская коса, Кольский, Алтай, Байкал, Карелия">
+  <meta name="author" content="Krivonos Alina">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>Место</title>
+</head>
+
+<body class="root">
+ <div class="page">
+   <header class="header page__container">
+      <img src="./images/logo.svg" alt="Логотип сайта Место" class="header__logo">
+   </header>
+
+    <main class="content page__container">
+     <section class="profile">
+        <img src="./images/avatarka.jpg" alt="Аватар" class="profile__avatar">
+        <div class="profile__info">
+          <div class="profile__description">
+            <h1 class="profile__username">Жак-Ив Кусто</h1>
+            <p class="profile__job">Исследователь океана</p>
+          </div>
+          <button class="profile__edit-button button-hover popup-open" type="button" aria-label="Редактировать"></button>
+        </div>
+        <button class="profile__add-button button-hover" type="button" aria-label="Добавить"></button>
+     </section>
+
+     <section class="elements">
+       <div class="element">
+          <img src="./images/taganrog.jpg" alt="Европейский квартал в Таганроге" class="element__photo">
+          <div class="element__container">
+            <h2 class="element__text">Европейский квартал в Таганроге</h2>
+            <button class="element__heart-button button-hover" type="button"></button>
+          </div>
+       </div>
+
+       <div class="element">
+          <img src="./images/foros-park.jpg" alt="Вход в Форосский парк" class="element__photo">
+          <div class="element__container">
+            <h2 class="element__text">Форосский парк</h2>
+            <button class="element__heart-button button-hover" type="button" aria-label="Нравится"></button>
+          </div>
+       </div>
+
+       <div class="element">
+          <img src="./images/yalta.jpg" alt="Эйфелева башня в Массандровском пляже" class="element__photo">
+          <div class="element__container">
+            <h2 class="element__text">Массандровский пляж</h2>
+            <button class="element__heart-button button-hover" type="button" aria-label="Нравится"></button>
+          </div>
+       </div>
+
+       <div class="element">
+          <img src="./images/foros-cerkov.jpg" alt="Форосская церковь в закате" class="element__photo">
+          <div class="element__container">
+            <h2 class="element__text">Форосская церковь</h2>
+            <button class="element__heart-button button-hover" type="button" aria-label="Нравится"></button>
+          </div>
+       </div>
+
+       <div class="element">
+          <img src="./images/kislovodsk.jpg" alt="Лермонтов смотрит на Эльбрус" class="element__photo">
+          <div class="element__container">
+            <h2 class="element__text">Кисловодский парк</h2>
+            <button class="element__heart-button button-hover" type="button" aria-label="Нравится"></button>
+          </div>
+       </div>
+
+       <div class="element">
+          <img src="./images/paramon-sklad.jpg" alt="Родник в Паромоновском складу" class="element__photo">
+          <div class="element__container">
+            <h2 class="element__text">Парамоновские склады в Ростове-на-Дону</h2>
+            <button class="element__heart-button button-hover" type="button" aria-label="Нравится"></button>
+          </div>
+       </div>
+     </section>
+    </main>
+
+   <footer class="footer page__container">
+      <p class="footer__copyright">&copy;2022 Mesto Russia</p>
+   </footer>
+ </div>
+
+ <div class="popup">
+    <div class="popup__container">
+      <button class="popup__close-button button-hover" type="button" aria-label="Закрыть попап"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__form">
+        <input type="text" name="username" class="popup__form_el popup__username" placeholder="Введите имя">
+        <input type="text" name="job" class="popup__form_el popup__job" placeholder="Расскажите о себе">
+        <input class="popup__submit-button button-hover" type="submit" value="Сохранить"></input>
+      </form>
+    </div>
+ </div>
+
+<script src="./scripts/script.js"></script>
+</body>
+</html>

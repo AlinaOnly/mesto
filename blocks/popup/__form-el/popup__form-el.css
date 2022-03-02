@@ -1,0 +1,18 @@
+.popup__form_el {
+  width: 358px;
+  height: 27px;
+  border: 0;
+  border-bottom: 1px solid #000000;
+  font-size: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 0 0 13px 0;
+  margin: 30px 0 0;
+}
+
+@media screen and (max-width: 700px) and (min-width: 320px) {
+  .popup__form_el {
+    width: 238px;
+  }
+}
