@@ -4,8 +4,8 @@ let closePopup = document.querySelector('.popup__close-button');
 let submitForm = popup.querySelector('.popup__form');
 let profileName = document.querySelector('.profile__username');
 let profileJob = document.querySelector('.profile__job');
-let nameInput = popup.querySelector('.popup__username');
-let jobInput = popup.querySelector('.popup__job');
+let nameInput = popup.querySelector('.popup__form-el_type_name');
+let jobInput = popup.querySelector('.popup__form-el_type_job');
 
 function openedPopup() {
   popup.classList.add('popup_open');
