@@ -16,6 +16,7 @@
    </header>
 
     <main class="content page__container">
+
      <section class="profile">
         <img src="./images/avatarka.jpg" alt="Аватар" class="profile__avatar">
         <div class="profile__info">
@@ -29,53 +30,6 @@
      </section>
 
      <section class="elements" aria-label="Секция с фото">
-       <article class="element">
-          <img src="./images/taganrog.jpg" alt="Европейский квартал в Таганроге" class="element__photo">
-          <div class="element__container">
-            <h2 class="element__text">Европейский квартал в Таганроге</h2>
-            <button class="element__heart-button" type="button"></button>
-          </div>
-       </article>
-
-       <article class="element">
-          <img src="./images/foros-park.jpg" alt="Вход в Форосский парк" class="element__photo">
-          <div class="element__container">
-            <h2 class="element__text">Форосский парк</h2>
-            <button class="element__heart-button" type="button" aria-label="Нравится"></button>
-          </div>
-       </article>
-
-       <article class="element">
-          <img src="./images/yalta.jpg" alt="Эйфелева башня в Массандровском пляже" class="element__photo">
-          <div class="element__container">
-            <h2 class="element__text">Массандровский пляж</h2>
-            <button class="element__heart-button" type="button" aria-label="Нравится"></button>
-          </div>
-       </article>
-
-       <article class="element">
-          <img src="./images/foros-cerkov.jpg" alt="Форосская церковь в закате" class="element__photo">
-          <div class="element__container">
-            <h2 class="element__text">Форосская церковь</h2>
-            <button class="element__heart-button" type="button" aria-label="Нравится"></button>
-          </div>
-       </article>
-
-       <article class="element">
-          <img src="./images/kislovodsk.jpg" alt="Лермонтов смотрит на Эльбрус" class="element__photo">
-          <div class="element__container">
-            <h2 class="element__text">Кисловодский парк</h2>
-            <button class="element__heart-button" type="button" aria-label="Нравится"></button>
-          </div>
-       </article>
-
-       <article class="element">
-          <img src="./images/paramon-sklad.jpg" alt="Родник в Паромоновском складу" class="element__photo">
-          <div class="element__container">
-            <h2 class="element__text">Парамоновские склады в Ростове-на-Дону</h2>
-            <button class="element__heart-button" type="button" aria-label="Нравится"></button>
-          </div>
-       </article>
      </section>
     </main>
 
@@ -83,7 +37,7 @@
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
    </footer>
 
-    <div class="popup">
+    <div class="popup" id="popupProfile">
       <div class="popup__container">
         <button class="popup__close-button button-hover" type="button" aria-label="Закрыть попап"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
@@ -94,7 +48,38 @@
         </form>
       </div>
     </div>
+
+    <div class="popup" id="popupAddsCards">
+      <div class="popup__container">
+        <button class="popup__close-button button-hover" type="button" aria-label="Закрыть попап"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__form save" name="formSubmitPlace">
+          <input type="text" name="name" class="popup__form-el popup__form-el_type_name" placeholder="Название">
+          <input type="text" name="link" class="popup__form-el popup__form-el_type_link" placeholder="Ссылка на картинку">
+          <button class="popup__submit-button" type="submit" value="Сохранить">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup" id="openImage">
+      <div class="popup__photo">
+        <img src="" alt="" class="popup__image">
+        <h2 class="popup__image-text"></h2>
+        <button class="popup__close-button button-hover" type="button" aria-label="Закрыть попап"></button>
+      </div>
+    </div>
     
+    <template class="cards-template">
+        <article class="element">
+            <button class="element__trash-button" type="button" title="Удалить"></button>
+            <img src="" alt="" class="element__photo">
+            <div class="element__container">
+              <h2 class="element__text"></h2>
+              <button class="element__heart-button" type="button" aria-label="Нравится"></button>
+            </div>
+        </article>
+    </template>
+
   </div>
 <script src="./scripts/index.js"></script>
 </body>
