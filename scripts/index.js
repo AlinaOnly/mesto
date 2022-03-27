@@ -11,7 +11,7 @@ const inputJob = profilePopup.querySelector('.popup__form-el_type_job');
 
 const buttonCardAdd = document.querySelector('.profile__add-button');
 const cardPopup = document.querySelector('#cardPopup');
-const cardSubmit = cardPopup.querySelector('.save');
+const cardSubmit = cardPopup.querySelector('#newCardAddForm');
 const buttonCardClose = cardPopup.querySelector('.popup__close-button');
 const formInputName = cardPopup.querySelector('.popup__form-el_type_title');
 const formInputLink = cardPopup.querySelector('.popup__form-el_type_link');
@@ -107,8 +107,8 @@ function addNewPhoto(event) {
   const newInputTitle = formInputName.value;
   const newInputLink = formInputLink.value;
   renderCards({ name: newInputTitle, link: newInputLink });
-  event.currentTarget.reset(formInputName, formInputLink);
   closePopup(cardPopup);
+  cardSubmit.reset(formInputName, formInputLink);
 }
 
 buttonProfileOpen.addEventListener('click', openPropfilePopup);
@@ -131,4 +131,6 @@ buttonImageClose.addEventListener('click', () => {
   closePopup(imagePopup);
 });
 
-initialCards.map(renderCards); 
+initialCards.forEach(renderCards); 
+
+
