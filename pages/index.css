@@ -37,10 +37,14 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__error_visible/popup__error_visible.css);
+@import url(../blocks/popup/__error_visible/_type_visible/popup__error_type_visible.css);
 @import url(../blocks/popup/__form-el/popup__form-el.css);
+@import url(../blocks/popup/__form-el/_type_error/popup__form-el_type_error.css);
 @import url(../blocks/popup/_background/popup_background.css);
 @import url(../blocks/popup/__photo/popup__photo.css);
 @import url(../blocks/popup/__image/popup__image.css);
 @import url(../blocks/popup/__image-text/popup__image-text.css);
 @import url(../blocks/popup/__submit-button/popup__submit-button.css);
+@import url(../blocks/popup/__submit-button/_disabled/popup__submit-button_disabled.css);
 

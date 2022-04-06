@@ -2,7 +2,7 @@
 const profilePopup = document.querySelector('#profilePopup');
 const buttonProfileOpen = document.querySelector('.profile__edit-button');
 const buttonProfileClose = profilePopup.querySelector('.popup__close-button');
-const buttonProfileSubmit = profilePopup.querySelector('.popup__form');
+const buttonProfileSubmit = profilePopup.querySelector('#profileSubmitForm');
 
 const profileName = document.querySelector('.profile__username');
 const profileJob = document.querySelector('.profile__job');
@@ -54,10 +54,28 @@ const initialCards = [
 
 function openPopup(popup) {
   popup.classList.add('popup_open');
+  closeOverlay(popup);
+  closeEscButton(popup);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_open');
+}
+
+function closeOverlay(popup) {
+  popup.addEventListener('click', function (event) {
+    if (event.target === event.currentTarget) {
+      closePopup(popup);
+    }
+  });
+}
+
+function closeEscButton(popup) {
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+    closePopup(popup);
+    }
+  });
 }
 
 function openPropfilePopup() { 
