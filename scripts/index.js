@@ -56,13 +56,13 @@ const initialCards = [
 function openPopup(popup) {
   popup.classList.add('popup_open');
   popup.addEventListener('click', closeOverlay);
-  closeEscButton(popup);
+  document.addEventListener('keydown', closeEscButton);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_open');
   popup.removeEventListener('click', closeOverlay);
-  document.removeEventListener('keydowm', closeEscButton);
+  document.removeEventListener('keydown', closeEscButton);
 }
 
 function closeOverlay(event) {
@@ -71,12 +71,11 @@ function closeOverlay(event) {
   }
 }
 
-function closeEscButton(popup) { 
-  document.addEventListener('keydown', function (event) { 
-    if (event.key === 'Escape') { 
-    closePopup(popup); 
-    } 
-  }); 
+function closeEscButton(event) { 
+  if (event.key === 'Escape') { 
+    const openedPopup = document.querySelector('.popup_open');
+     closePopup(openedPopup); 
+  } 
 } 
 
 function openPropfilePopup() { 
@@ -135,10 +134,10 @@ buttonProfileClose.addEventListener('click', () => {
 });
 
 buttonCardAdd.addEventListener('click', () => {
-  openPopup(cardPopup);
   cardSubmit.reset();
   buttonSubmit.setAttribute('disabled', 'disabled');
   buttonSubmit.classList.add('popup__submit-button_disabled');
+  openPopup(cardPopup);
 });
 
 buttonCardClose.addEventListener('click', () => {
