@@ -41,7 +41,7 @@ const enableValidation = (obj) => {
       evt.preventDefault();
     });
     setEventListeners(formElement, obj);
-  });
+  });   
 };
 
 function hasInvalidInput(inputList) {
@@ -66,6 +66,6 @@ enableValidation({
   submitButtonSelector: '.popup__submit-button',
   inactiveButtonClass: 'popup__submit-button_disabled',
   inputErrorClass: 'popup__form-el_type_error',
-  errorClass: 'popup__input-error'
+  errorClass: 'popup__input-error_visible'
 }); 
 

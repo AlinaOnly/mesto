@@ -12,6 +12,7 @@ const inputJob = profilePopup.querySelector('.popup__form-el_type_job');
 const buttonCardAdd = document.querySelector('.profile__add-button');
 const cardPopup = document.querySelector('#cardPopup');
 const cardSubmit = cardPopup.querySelector('#newCardAddForm');
+const buttonSubmit = cardPopup.querySelector('.popup__submit-button');
 const buttonCardClose = cardPopup.querySelector('.popup__close-button');
 const formInputName = cardPopup.querySelector('.popup__form-el_type_title');
 const formInputLink = cardPopup.querySelector('.popup__form-el_type_link');
@@ -54,29 +55,29 @@ const initialCards = [
 
 function openPopup(popup) {
   popup.classList.add('popup_open');
-  closeOverlay(popup);
+  popup.addEventListener('click', closeOverlay);
   closeEscButton(popup);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_open');
+  popup.removeEventListener('click', closeOverlay);
+  document.removeEventListener('keydowm', closeEscButton);
 }
 
-function closeOverlay(popup) {
-  popup.addEventListener('click', function (event) {
-    if (event.target === event.currentTarget) {
-      closePopup(popup);
-    }
-  });
+function closeOverlay(event) {
+  if (event.target.classList.contains('popup') || event.target.classList.contains('popup__close-button')) {
+    closePopup(event.currentTarget);
+  }
 }
 
-function closeEscButton(popup) {
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-    closePopup(popup);
-    }
-  });
-}
+function closeEscButton(popup) { 
+  document.addEventListener('keydown', function (event) { 
+    if (event.key === 'Escape') { 
+    closePopup(popup); 
+    } 
+  }); 
+} 
 
 function openPropfilePopup() { 
   inputName.value = profileName.textContent;
@@ -126,7 +127,6 @@ function addNewPhoto(event) {
   const newInputLink = formInputLink.value;
   renderCards({ name: newInputTitle, link: newInputLink });
   closePopup(cardPopup);
-  cardSubmit.reset(formInputName, formInputLink);
 }
 
 buttonProfileOpen.addEventListener('click', openPropfilePopup);
@@ -136,6 +136,9 @@ buttonProfileClose.addEventListener('click', () => {
 
 buttonCardAdd.addEventListener('click', () => {
   openPopup(cardPopup);
+  cardSubmit.reset();
+  buttonSubmit.setAttribute('disabled', 'disabled');
+  buttonSubmit.classList.add('popup__submit-button_disabled');
 });
 
 buttonCardClose.addEventListener('click', () => {

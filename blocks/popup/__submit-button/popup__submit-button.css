@@ -8,7 +8,7 @@
   padding: 0;
   font-size: 18px;
   line-height: 22px;
-  margin-top: 48px;
+  margin-top: 7px;
   transition: 0.4s ease;
   outline: none;
   border: none;
@@ -21,7 +21,7 @@
 @media screen and (max-width: 700px) {
   .popup__submit-button {
     width: 238px;
-    margin-top: 45px;
+    margin-top: 2px;
     font-size: 14px;
     line-height: 17px;
   }
