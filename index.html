@@ -21,8 +21,8 @@
         <img src="./images/avatarka.jpg" alt="Аватар" class="profile__avatar">
         <div class="profile__info">
           <div class="profile__description">
-            <h1 class="profile__username">Жак-Ив Кусто</h1>
-            <p class="profile__job">Исследователь океана</p>
+            <h1 class="profile__username">Жак-Елс Дерево</h1>
+            <p class="profile__job">Исследователь ООП</p>
           </div>
           <button class="profile__edit-button button-hover" type="button" aria-label="Редактировать"></button>
         </div>
@@ -42,7 +42,7 @@
         <button class="popup__close-button button-hover" type="button" aria-label="Закрыть попап"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form" id="profileSubmitForm" name="profileSubmitForm" novalidate>
-          <input type="text" id="username" name="username" class="popup__form-el popup__form-el_type_name" 
+          <input type="text" id="username" name="username" class="popup__form-el popup__form-el_type_name"
           placeholder="Введите имя" minlength="2" maxlength="40" required>
            <span id="username-error" class="popup__input-error"></span>
           <input type="text" id="job" name="job" class="popup__form-el popup__form-el_type_job"
@@ -76,7 +76,7 @@
         <button class="popup__close-button button-hover" type="button" aria-label="Закрыть попап"></button>
       </div>
     </div>
-    
+
     <template class="cards-template">
         <article class="element">
             <button class="element__trash-button" type="button" title="Удалить"></button>
@@ -89,7 +89,8 @@
     </template>
 
   </div>
-<script src="./scripts/index.js"></script>
-<script src="./scripts/validate.js"></script>
+
+<script type="module" src="./scripts/index.js"></script>
+
 </body>
 </html>
