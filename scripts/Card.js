@@ -1,15 +1,15 @@
 
 export class Card {
-  constructor(data, cardSelector, handleOpenPopup) {
+  constructor(data, cardTemplate, openImagePopup) {
     this._name = data.name;
     this._src = data.link;
-    this._cardSelector = cardSelector;
-    this._handleOpenPopup = handleOpenPopup;
+    this._cardTemplate = cardTemplate;
+    this._openImagePopup = openImagePopup;
   }
 
   _getTemplate() {
     const cardElement = document
-    .querySelector(this._cardSelector)
+    .querySelector(this._cardTemplate)
     .content
     .querySelector('.element')
     .cloneNode(true);
@@ -52,7 +52,7 @@ export class Card {
     });
 
     this._image.addEventListener('click', () => {
-      this._handleOpenPopup();
+      this._openImagePopup(this._src, this._name);
     });
   }
 }
