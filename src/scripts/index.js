@@ -93,7 +93,7 @@ function closeEscButton(event) {
   }
 }
 
-function openPropfilePopup() {
+function openProfilePopup() {
   inputName.value = profileName.textContent;
   inputJob.value = profileJob.textContent;
   profileValidation.resetValidation();
@@ -149,7 +149,7 @@ function addNewPhoto(event) {
 
 
 //listeners
-buttonProfileOpen.addEventListener('click', openPropfilePopup);
+buttonProfileOpen.addEventListener('click', openProfilePopup);
 buttonProfileClose.addEventListener('click', () => {
   closePopup(profilePopup);
 });
