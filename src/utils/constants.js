@@ -1,28 +1,28 @@
 
 export const profilePopup = document.querySelector('#profilePopup');
 export const buttonProfileOpen = document.querySelector('.profile__edit-button');
-export const buttonProfileClose = profilePopup.querySelector('.popup__close-button');
+//export const buttonProfileClose = profilePopup.querySelector('.popup__close-button');
 
 export const profileForm = profilePopup.querySelector('.popup__form');
-export const profileName = document.querySelector('.profile__username');
-export const profileJob = document.querySelector('.profile__job');
-export const inputName = profilePopup.querySelector('.popup__form-el_type_name');
-export const inputJob = profilePopup.querySelector('.popup__form-el_type_job');
+export const profileName = '.profile__username';
+export const profileJob = '.profile__job';
+//export const inputName = profilePopup.querySelector('.popup__form-el_type_name');
+//export const inputJob = profilePopup.querySelector('.popup__form-el_type_job');
 
 export const buttonCardAdd = document.querySelector('.profile__add-button');
 export const cardPopup = document.querySelector('#cardPopup');
 export const newCardForm = cardPopup.querySelector('.popup__form');
-export const cardSubmit = cardPopup.querySelector('#newCardAddForm');
-export const buttonCardClose = cardPopup.querySelector('.popup__close-button');
-export const formInputName = cardPopup.querySelector('.popup__form-el_type_title');
-export const formInputLink = cardPopup.querySelector('.popup__form-el_type_link');
+//export const cardSubmit = cardPopup.querySelector('#newCardAddForm');
+//export const buttonCardClose = cardPopup.querySelector('.popup__close-button');
+//export const formInputName = cardPopup.querySelector('.popup__form-el_type_title');
+//export const formInputLink = cardPopup.querySelector('.popup__form-el_type_link');
 
 export const elementsCard = document.querySelector('.elements');
 
 export const imagePopup = document.querySelector('#imagePopup');
-export const imageView = imagePopup.querySelector('.popup__image');
-export const imageText = imagePopup.querySelector('.popup__image-text');
-export const buttonImageClose = imagePopup.querySelector('.popup__close-button');
+//export const imageView = imagePopup.querySelector('.popup__image');
+//export const imageText = imagePopup.querySelector('.popup__image-text');
+//export const buttonImageClose = imagePopup.querySelector('.popup__close-button');
 
 export const initialCards = [
   {

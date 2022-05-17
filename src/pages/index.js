@@ -6,28 +6,28 @@ import {Section} from '../components/Section.js';
 import {PopupWithImage} from '../components/PopupWithImage.js';
 import {PopupWithForm} from '../components/PopupWithForm.js';
 import {UserInfo} from '../components/UserInfo.js';
-import { initialCards, objFormElement, profilePopup, buttonProfileOpen,
+import { initialCards, objFormElement, buttonProfileOpen,
   profileForm, profileName, profileJob,
-  buttonCardAdd, cardPopup, newCardForm, imagePopup} from '../utils/constants.js';
+  buttonCardAdd, newCardForm} from '../utils/constants.js';
 
 
 const defaultCardList = new Section ({
   items: initialCards,
   renderer: (item) => {
-    const cardElement = createCards(item, '.cards-template', handleCardClick);
+    const cardElement = createCards(item);
     defaultCardList.addItem(cardElement);
   }
 }, '.elements');
 
-const userInfo = new UserInfo(profileName, profileJob);
+const userInfo = new UserInfo( {userName: profileName, userJob: profileJob} );
 
-const cardPopupOpen = new PopupWithImage(imagePopup);
+const cardPopupOpen = new PopupWithImage('#imagePopup');
 cardPopupOpen.setEventListeners();
 
-const infoPopupProfile = new PopupWithForm(profilePopup, submitFormProfile);
+const infoPopupProfile = new PopupWithForm('#profilePopup', submitFormProfile);
 infoPopupProfile.setEventListeners();
 
-const infoPopupCard = new PopupWithForm(cardPopup, submitCards);
+const infoPopupCard = new PopupWithForm('#cardPopup', submitCards);
 infoPopupCard.setEventListeners();
 
 const profileValidation = new FormValidator(objFormElement, profileForm);
@@ -36,14 +36,14 @@ profileValidation.enableValidation();
 const photoValidation = new FormValidator(objFormElement, newCardForm);
 photoValidation.enableValidation();
 
-function createCards(data, cardSelector) {
-  const card = new Card (data, cardSelector, handleCardClick);
+function createCards(data) {
+  const card = new Card (data, '.cards-template', handleCardClick);
   return card.generateCard();
 }
 
 function submitCards(item) {
-  const cards = createCards(item, '.cards-template', handleCardClick);
-  defaultCardList.prependItems(cards);
+  const cards = createCards(item);
+  defaultCardList.prependItem(cards);
   infoPopupCard.close();
 }
 
@@ -58,13 +58,13 @@ function handleCardClick(src, name) {
 
 buttonProfileOpen.addEventListener('click', () => {
   infoPopupProfile.setInputValues(userInfo.getUserInfo());
-  infoPopupProfile.open();
   profileValidation.resetValidation();
+  infoPopupProfile.open();
 });
 
 buttonCardAdd.addEventListener('click', () => {
-  infoPopupCard.open();
   photoValidation.resetValidation();
+  infoPopupCard.open();
 });
 
 defaultCardList.renderItems();
