@@ -163,6 +163,7 @@ function handleLikeCounter(card) {
   }
 }
 
+
 //батоны
 buttonProfileOpen.addEventListener('click', () => {
   infoPopupProfile.setInputValues(userInfo.getUserInfo());
