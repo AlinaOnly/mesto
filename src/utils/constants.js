@@ -4,8 +4,13 @@ export const buttonProfileOpen = document.querySelector('.profile__edit-button')
 //export const buttonProfileClose = profilePopup.querySelector('.popup__close-button');
 
 export const profileForm = profilePopup.querySelector('.popup__form');
+export const profileAvatar = '.profile__avatar';
 export const profileName = '.profile__username';
 export const profileJob = '.profile__job';
+
+export const avatarPopup = document.querySelector('#avatarPopup');
+export const avatarForm = avatarPopup.querySelector('.popup__form');
+export const buttonAvatar = document.querySelector('.profile__avatar-button');
 //export const inputName = profilePopup.querySelector('.popup__form-el_type_name');
 //export const inputJob = profilePopup.querySelector('.popup__form-el_type_job');
 
