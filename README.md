@@ -27,5 +27,7 @@
 
 Ссылка на git хостинг - [git хостинг](https://alinaonly.github.io/mesto/index.html)
 
+[Ссылка для клонирования репозитория](https://github.com/AlinaOnly/mesto.git)
+
 
 Запуск локального HTTP сервера у себя на компьютере - [Как настроить локальный сервер для тестирования?](https://developer.mozilla.org/ru/docs/Learn/Common_questions/set_up_a_local_testing_server)
